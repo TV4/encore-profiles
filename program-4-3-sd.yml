@@ -18,7 +18,7 @@ encodes:
       fps_mode: cfr
       crf: 21
       pix_fmt: yuv420p
-      force_key_frames: "expr:not(mod(n,96))"
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: main
       level: 3.1
     x264-params:
@@ -47,7 +47,7 @@ encodes:
       fps_mode: cfr
       crf: 21
       pix_fmt: yuv420p
-      force_key_frames: "expr:not(mod(n,96))"
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: main
       level: 3.1
     x264-params:
@@ -76,7 +76,7 @@ encodes:
       fps_mode: cfr
       crf: 21
       pix_fmt: yuv420p
-      force_key_frames: "expr:not(mod(n,96))"
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: baseline
       level: 3.1
     x264-params:
@@ -105,7 +105,7 @@ encodes:
       fps_mode: cfr
       crf: 21
       pix_fmt: yuv420p
-      force_key_frames: "expr:not(mod(n,96))"
+      force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: baseline
       level: 3.1
     x264-params:
