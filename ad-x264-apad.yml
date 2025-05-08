@@ -1,4 +1,4 @@
-name: ad-x264
+name: ad-x264-apad
 description: Ad profile
 scaling: bicubic # lanczos might e better, but has a performance impact
 encodes:
