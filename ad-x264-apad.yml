@@ -1,0 +1,432 @@
+name: ad-x264
+description: Ad profile
+scaling: bicubic # lanczos might e better, but has a performance impact
+encodes:
+  - type: X264Encode
+    suffix: _x264_1080_25
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 1080
+    width: 1920
+    params:
+      b:v: 5000k
+      maxrate: 7500k
+      bufsize: 10000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: high
+      level: 4.0
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_720_25
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 720
+    width: 1280
+    params:
+      b:v: 3500k
+      maxrate: 5250k
+      bufsize: 6000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: high
+      level: 3.1
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_720_50
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 720
+    width: 1280
+    params:
+      b:v: 3500k
+      maxrate: 5250k
+      bufsize: 7000k
+      r: 50
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: high
+      level: 3.2
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_576_25
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 576
+    width: 1024
+    params:
+      b:v: 2500k
+      maxrate: 3750k
+      bufsize: 5000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.1
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_576_50
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 576
+    width: 1024
+    params:
+      b:v: 2500k
+      maxrate: 3750k
+      bufsize: 5000k
+      r: 50
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.2
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_432_25
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 432
+    width: 768
+    params:
+      b:v: 1500k
+      maxrate: 2250k
+      bufsize: 3000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.0
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_360_25
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 360
+    width: 640
+    params:
+      b:v: 800k
+      maxrate: 1200k
+      bufsize: 1600k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.0
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_216_25
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 216
+    width: 384
+    params:
+      b:v: 300k
+      maxrate: 450k
+      bufsize: 600k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 1.3
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_4-3_576
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 576
+    width: 768
+    filters:
+      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
+    params:
+      b:v: 2500k
+      maxrate: 3750k
+      bufsize: 5000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.1
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_4-3_432_25
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 432
+    width: 576
+    filters:
+      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
+    params:
+      b:v: 1500k
+      maxrate: 2250k
+      bufsize: 3000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.0
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_4-3_360_25
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 360
+    width: 480
+    filters:
+      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
+    params:
+      b:v: 800k
+      maxrate: 1200k
+      bufsize: 1600k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 2.1
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_4-3_216_25
+    twoPass: false # Might want 2-pass, we'll see
+    ffmpegParams:
+      - shortest
+    height: 216
+    width: 288
+    filters:
+      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
+    params:
+      b:v: 300k
+      maxrate: 450k
+      bufsize: 600k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 1.3
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
