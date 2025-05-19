@@ -26,7 +26,9 @@ encodes:
       type: AudioEncode
       codec: aac
       bitrate: 128k
-      suffix: STEREO
+      suffix: _STEREO
+      filters:
+        - loudnorm
 
   - type: X264Encode
     suffix: _4000_720p
@@ -52,7 +54,9 @@ encodes:
       type: AudioEncode
       codec: aac
       bitrate: 128k
-      suffix: STEREO
+      suffix: _STEREO
+      filters:
+        - loudnorm
 
   - type: X264Encode
     suffix: _2500_576p
@@ -78,7 +82,9 @@ encodes:
       type: AudioEncode
       codec: aac
       bitrate: 128k
-      suffix: STEREO
+      suffix: _STEREO
+      filters:
+        - loudnorm
 
   - type: X264Encode
     suffix: _1500_432p
@@ -104,7 +110,9 @@ encodes:
       type: AudioEncode
       codec: aac
       bitrate: 128k
-      suffix: STEREO
+      suffix: _STEREO
+      filters:
+        - loudnorm
 
   - type: X264Encode
     suffix: _800_360p
@@ -130,7 +138,9 @@ encodes:
       type: AudioEncode
       codec: aac
       bitrate: 96k
-      suffix: STEREO
+      suffix: _STEREO
+      filters:
+        - loudnorm
 
   - type: X264Encode
     suffix: _300_216p
@@ -156,10 +166,14 @@ encodes:
       type: AudioEncode
       codec: aac
       bitrate: 96k
-      suffix: STEREO
+      suffix: _STEREO
+      filters:
+        - loudnorm
 
   - type: AudioEncode
     optional: true
     codec: aac
     bitrate: 128k
     suffix: _STEREO
+    filters:
+        - loudnorm

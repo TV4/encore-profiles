@@ -1,14 +1,14 @@
 name: program-4-3-sd
 description: 4:3 SD content
-scaling: bicubic 
+scaling: bicubic
 encodes:
   - type: X264Encode
     suffix: _SD_4-3_576
-    twoPass: false 
+    twoPass: false
     height: 576
     width: 768
     filters:
-      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" 
+      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2"
     params:
       preset: medium
       b:v: 2372k
@@ -30,14 +30,16 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
+      filters:
+        - loudnorm
 
   - type: X264Encode
     suffix: _SD_4-3_432_25
-    twoPass: false 
+    twoPass: false
     height: 432
     width: 576
     filters:
-      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" 
+      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2"
     params:
       preset: medium
       b:v: 1372k
@@ -59,14 +61,16 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
+      filters:
+        - loudnorm
 
   - type: X264Encode
     suffix: _SD_4-3_360_25
-    twoPass: false 
+    twoPass: false
     height: 360
     width: 480
     filters:
-      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" 
+      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2"
     params:
       preset: medium
       b:v: 672k
@@ -88,14 +92,16 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      
+      filters:
+        - loudnorm
+
   - type: X264Encode
     suffix: _SD_4-3_216_25
-    twoPass: false 
+    twoPass: false
     height: 216
     width: 288
     filters:
-      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" 
+      - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2"
     params:
       preset: medium
       b:v: 204k
@@ -117,9 +123,13 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
+      filters:
+        - loudnorm
 
   - type: AudioEncode
     optional: true
     codec: aac
     bitrate: 128k
     suffix: _STEREO
+    filters:
+        - loudnorm

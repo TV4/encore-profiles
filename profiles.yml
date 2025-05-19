@@ -1,6 +1,7 @@
 program: program-hd.yml
 program-hd: program-hd.yml
-program-hd-medium: program-hd-medium.yml
+program-sd: program-sd.yml
+program-4-3-sd: program-4-3-sd.yml
 program-x265: program-x265.yml
 program-sd: program-sd.yml
 program-4-3-sd: program-4-3-sd.yml
