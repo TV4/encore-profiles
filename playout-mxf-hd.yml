@@ -4,8 +4,11 @@ encodes:
   - type: VideoEncode
     codec: mpeg2video
     height: 1080
+    filters:
+      - "format=yuv422p"
+      - "fieldorder=tff"
+      - "setfield=tff"
     params:
-      vf: "format=yuv422p,fieldorder=tff,setfield=tff"
       r: 25
       b:v: 50000k
       minrate: 50000k
@@ -21,10 +24,6 @@ encodes:
       mbd: 2
       rc_init_occupancy: 910000
       pix_fmt: yuv422p
-      filter_complex: "[0:a]channelsplit=channel_layout=stereo[left][right]"
-      map: 0:v
-      map: "[left]"
-      map: "[right]"
       timecode: 00:00:00:00
     suffix: _xdcamhd_50m
     format: mxf
