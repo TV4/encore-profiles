@@ -33,9 +33,9 @@ encodes:
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
-        audioMixPreset: mono-left
+        audioMixPreset: monoleft
       - type: AudioEncode
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
-        audioMixPreset: mono-right
+        audioMixPreset: monoright
