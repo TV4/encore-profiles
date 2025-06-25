@@ -28,8 +28,14 @@ encodes:
     suffix: _xdcamhd_50m
     format: mxf
     twoPass: false
-    audioEncode:
-      type: AudioEncode
-      codec: pcm_s24le
-      ar: 48000
-      ac: 1
+    audioEncodes:
+      - type: AudioEncode
+        codec: pcm_s24le
+        samplerate: 48000
+        channelLayout: mono
+        audioMixPreset: mono-left
+      - type: AudioEncode
+        codec: pcm_s24le
+        samplerate: 48000
+        channelLayout: mono
+        audioMixPreset: mono-right
