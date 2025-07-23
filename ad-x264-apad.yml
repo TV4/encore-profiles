@@ -8,7 +8,7 @@ encodes:
     height: 1080
     width: 1920
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
     params:
       shortest:
       b:v: 5000k
@@ -44,7 +44,7 @@ encodes:
     height: 720
     width: 1280
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
     params:
       shortest:
       b:v: 3500k
@@ -80,7 +80,7 @@ encodes:
     height: 720
     width: 1280
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
     params:
       shortest:
       b:v: 3500k
@@ -116,7 +116,7 @@ encodes:
     height: 576
     width: 1024
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
     params:
       shortest:
       b:v: 2500k
@@ -152,7 +152,7 @@ encodes:
     height: 576
     width: 1024
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
     params:
       shortest:
       b:v: 2500k
@@ -188,7 +188,7 @@ encodes:
     height: 432
     width: 768
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
     params:
       shortest:
       b:v: 1500k
@@ -224,7 +224,7 @@ encodes:
     height: 360
     width: 640
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
     params:
       shortest:
       b:v: 800k
@@ -260,7 +260,7 @@ encodes:
     height: 216
     width: 384
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
     params:
       shortest:
       b:v: 300k
@@ -296,7 +296,7 @@ encodes:
     height: 576
     width: 768
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
       - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
     params:
       shortest:
@@ -333,7 +333,7 @@ encodes:
     height: 432
     width: 576
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
       - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
     params:
       shortest:
@@ -370,7 +370,7 @@ encodes:
     height: 360
     width: 480
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
       - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
     params:
       shortest:
@@ -407,7 +407,7 @@ encodes:
     height: 216
     width: 288
     filters:
-      - colorspace=all=bt709
+      - colorspace=all=bt709:iall=bt709
       - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
     params:
       shortest:
