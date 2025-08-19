@@ -8,19 +8,19 @@ encodes:
     height: 1080
     params:
       preset: medium
-      b:v: 6372k
-      maxrate: 7000k
-      bufsize: 10000k
+      maxrate: 6500k
+      bufsize: 13000k
       r: 25
       fps_mode: cfr
       crf: 21
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: high
-      level: 4.1
+      level: 4.0
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
@@ -34,19 +34,19 @@ encodes:
     height: 720
     params:
       preset: medium
-      b:v: 3872k
-      maxrate: 4200k
-      bufsize: 6000k
+      maxrate: 4000k
+      bufsize: 8000k
       r: 25
       fps_mode: cfr
       crf: 21
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
-      profile:v: main
+      profile:v: high
       level: 3.1
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
@@ -60,9 +60,8 @@ encodes:
     height: 576
     params:
       preset: medium
-      b:v: 2372k
-      maxrate: 2800k
-      bufsize: 3800k
+      maxrate: 2500k
+      bufsize: 5000k
       r: 25
       fps_mode: cfr
       crf: 21
@@ -73,6 +72,7 @@ encodes:
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
@@ -86,19 +86,19 @@ encodes:
     height: 432
     params:
       preset: medium
-      b:v: 1372k
-      maxrate: 1600k
-      bufsize: 2100k
+      maxrate: 1500k
+      bufsize: 3000k
       r: 25
       fps_mode: cfr
       crf: 21
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: main
-      level: 3.1
+      level: 3.0
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
@@ -112,19 +112,19 @@ encodes:
     height: 360
     params:
       preset: medium
-      b:v: 672k
       maxrate: 800k
-      bufsize: 1100k
+      bufsize: 1600k
       r: 25
       fps_mode: cfr
       crf: 21
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
-      profile:v: baseline
-      level: 3.1
+      profile:v: main
+      level: 3.0
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
@@ -138,24 +138,24 @@ encodes:
     height: 216
     params:
       preset: medium
-      b:v: 204k
-      maxrate: 250k
-      bufsize: 310k
+      maxrate: 300k
+      bufsize: 600k
       r: 25
       fps_mode: cfr
       crf: 21
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
-      profile:v: baseline
-      level: 3.1
+      profile:v: main
+      level: 3.0
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
       codec: aac
-      bitrate: 96k
+      bitrate: 64k
       suffix: STEREO
 
   - type: AudioEncode
