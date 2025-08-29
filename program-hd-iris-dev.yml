@@ -34,7 +34,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      mixPreset: stereoOn12
+      audioMixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _4000_720p
@@ -62,7 +62,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      mixPreset: stereoOn12
+      audioMixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _2500_576p
@@ -90,7 +90,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      mixPreset: stereoOn12
+      audioMixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _1500_432p
@@ -118,7 +118,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      mixPreset: stereoOn12
+      audioMixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _800_360p
@@ -146,7 +146,7 @@ encodes:
       codec: aac
       bitrate: 96k
       suffix: STEREO
-      mixPreset: stereoOn12
+      audioMixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _300_216p
@@ -174,11 +174,11 @@ encodes:
       codec: aac
       bitrate: 64k
       suffix: STEREO
-      mixPreset: stereoOn12
+      audioMixPreset: stereoOn12
 
   - type: AudioEncode
     optional: true
     codec: aac
     bitrate: 128k
     suffix: _STEREO
-    mixPreset: stereoOn12
+    audioMixPreset: stereoOn12
