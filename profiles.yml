@@ -14,4 +14,5 @@ ad-x264: ad-x264.yml
 ad-x264-apad: ad-x264-apad.yml
 ad-x264-4-by-3: ad-x264-4-by-3.yml
 playout-mxf-hd: playout-mxf-hd.yml
+program-hd-iris-dev: program-hd-iris-dev.yml
 none:
