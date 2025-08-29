@@ -23,9 +23,7 @@ encodes:
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: high
       level: 4.0
-      extraParams:
-        - "-write_tmcd"
-        - "0"
+      extraParams: "-write_tmcd 0"
     x264-params:
       keyint: 192
       keyint_min: 96
@@ -53,9 +51,7 @@ encodes:
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: high
       level: 3.1
-      extraParams:
-        - "-write_tmcd"
-        - "0"
+      extraParams: "-write_tmcd 0"
     x264-params:
       keyint: 192
       keyint_min: 96
@@ -83,9 +79,7 @@ encodes:
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: main
       level: 3.1
-      extraParams:
-        - "-write_tmcd"
-        - "0"
+      extraParams: "-write_tmcd 0"
     x264-params:
       keyint: 192
       keyint_min: 96
@@ -113,9 +107,7 @@ encodes:
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: main
       level: 3.0
-      extraParams:
-        - "-write_tmcd"
-        - "0"
+      extraParams: "-write_tmcd 0"
     x264-params:
       keyint: 192
       keyint_min: 96
@@ -143,9 +135,7 @@ encodes:
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: main
       level: 3.0
-      extraParams:
-        - "-write_tmcd"
-        - "0"
+      extraParams: "-write_tmcd 0"
     x264-params:
       keyint: 192
       keyint_min: 96
@@ -173,9 +163,7 @@ encodes:
       force_key_frames: #{profileParams['keyframes']?:'expr:not(mod(n,96))'}
       profile:v: main
       level: 3.0
-      extraParams:
-        - "-write_tmcd"
-        - "0"
+      extraParams: "-write_tmcd 0"
     x264-params:
       keyint: 192
       keyint_min: 96
