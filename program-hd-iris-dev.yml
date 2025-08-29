@@ -4,14 +4,9 @@ scaling: bicubic
 streamSelection:
   includeTypes: [video, audio]
 audioMixPresets:
-  stereoFromDualMono:
-    inputs:
-      - stream: 0
-        channel: 0
-        targetChannel: left
-      - stream: 1
-        channel: 0
-        targetChannel: right
+  stereoOn12:
+    defaultPan: { stereo: 'FL=c0|FR=c1' }
+
 encodes:
   - type: X264Encode
     suffix: _6500_1080p
@@ -38,7 +33,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      mixPreset: stereoFromDualMono
+      mixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _4000_720p
@@ -65,7 +60,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      mixPreset: stereoFromDualMono
+      mixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _2500_576p
@@ -92,7 +87,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      mixPreset: stereoFromDualMono
+      mixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _1500_432p
@@ -119,7 +114,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      mixPreset: stereoFromDualMono
+      mixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _800_360p
@@ -146,7 +141,7 @@ encodes:
       codec: aac
       bitrate: 96k
       suffix: STEREO
-      mixPreset: stereoFromDualMono
+      mixPreset: stereoOn12
 
   - type: X264Encode
     suffix: _300_216p
@@ -173,11 +168,11 @@ encodes:
       codec: aac
       bitrate: 64k
       suffix: STEREO
-      mixPreset: stereoFromDualMono
+      mixPreset: stereoOn12
 
   - type: AudioEncode
     optional: true
     codec: aac
     bitrate: 128k
     suffix: _STEREO
-    mixPreset: stereoFromDualMono
+    mixPreset: stereoOn12
