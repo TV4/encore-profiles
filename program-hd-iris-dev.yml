@@ -34,7 +34,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      channels: 1
+      channelLayout: mono
       audioMixPreset: monoLeft
 
   - type: X264Encode
@@ -63,7 +63,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      channels: 1
+      channelLayout: mono
       audioMixPreset: monoLeft
 
   - type: X264Encode
@@ -92,7 +92,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      channels: 1
+      channelLayout: mono
       audioMixPreset: monoLeft
 
   - type: X264Encode
@@ -121,7 +121,7 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
-      channels: 1
+      channelLayout: mono
       audioMixPreset: monoLeft
 
   - type: X264Encode
@@ -150,7 +150,7 @@ encodes:
       codec: aac
       bitrate: 96k
       suffix: STEREO
-      channels: 1
+      channelLayout: mono
       audioMixPreset: monoLeft
 
   - type: X264Encode
@@ -179,7 +179,7 @@ encodes:
       codec: aac
       bitrate: 64k
       suffix: STEREO
-      channels: 1
+      channelLayout: mono
       audioMixPreset: monoLeft
 
   - type: AudioEncode
@@ -187,5 +187,5 @@ encodes:
     codec: aac
     bitrate: 128k
     suffix: _STEREO
-    channels: 1
+    channelLayout: mono
     audioMixPreset: monoLeft
