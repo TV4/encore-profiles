@@ -1,11 +1,6 @@
 name: program-hd-singlepass
 description: Program HD profile (25fps) Single Pass
 scaling: bicubic
-streamSelection:
-  includeTypes: [video, audio]
-audioMixPresets:
-  stereoOn12:
-    defaultPan: { stereo: 'FL=c0|FR=c1' }
 
 encodes:
   - type: X264Encode
@@ -187,5 +182,5 @@ encodes:
     codec: aac
     bitrate: 128k
     suffix: _STEREO
-    channelLayout: mono
-    audioMixPreset: monoLeft
+    channelLayout: stereo
+    audioMixPreset: stereoFromMono12
