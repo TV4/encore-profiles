@@ -14,7 +14,7 @@ encodes:
       minrate: 50000k
       maxrate: 50000k
       muxrate: 50000k
-      bufsize: 2187500
+      bufsize: 36408333
       g: 12
       bf: 2
       flags: +ildct+ilme+cgop
