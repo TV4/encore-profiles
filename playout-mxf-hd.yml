@@ -10,6 +10,7 @@ encodes:
       - "setfield=tff"
     params:
       r: 25
+      dc: 11
       b:v: 50000k
       minrate: 50000k
       maxrate: 50000k
