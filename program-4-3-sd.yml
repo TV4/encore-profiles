@@ -24,6 +24,7 @@ encodes:
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
@@ -53,6 +54,7 @@ encodes:
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
@@ -82,11 +84,12 @@ encodes:
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
       codec: aac
-      bitrate: 128k
+      bitrate: 96k
       suffix: STEREO
       
   - type: X264Encode
@@ -111,11 +114,12 @@ encodes:
     x264-params:
       keyint: 192
       keyint_min: 96
+      ref: 4
     audioEncode:
       optional: true
       type: AudioEncode
       codec: aac
-      bitrate: 128k
+      bitrate: 64k
       suffix: STEREO
 
   - type: AudioEncode
