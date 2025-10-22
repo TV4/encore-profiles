@@ -1,0 +1,43 @@
+name: playout-mxf-hd
+description: MXF XDCAM HD for playout
+encodes:
+  - type: VideoEncode
+    codec: mpeg2video
+    height: 1080
+    filters:
+      - "format=yuv422p"
+      - "fieldorder=tff"
+      - "setfield=tff"
+    params:
+      r: 25
+      dc: 11
+      b:v: 50000k
+      minrate: 50000k
+      maxrate: 50000k
+      muxrate: 50000k
+      bufsize: 36408333
+      g: 12
+      bf: 2
+      flags: +ildct+ilme+cgop
+      sc_threshold: 1000000000
+      mpv_flags: +strict_gop
+      trellis: 2
+      mbd: 2
+      rc_init_occupancy: 910000
+      pix_fmt: yuv422p
+      timecode: 00:00:00:00
+      metadata: creation_time="$(date -u +"%Y-%m-%dT%H:%M:%S")"
+    suffix: _xdcamhd_50m
+    format: mxf
+    twoPass: false
+    audioEncodes:
+      - type: AudioEncode
+        codec: pcm_s24le
+        samplerate: 48000
+        channelLayout: mono
+        audioMixPreset: monoLeft
+      - type: AudioEncode
+        codec: pcm_s24le
+        samplerate: 48000
+        channelLayout: mono
+        audioMixPreset: monoRight
