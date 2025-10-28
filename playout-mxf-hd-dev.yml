@@ -26,7 +26,7 @@ encodes:
       rc_init_occupancy: 910000
       pix_fmt: yuv422p
       timecode: 00:00:00:00
-      metadata: creation_time="2025-10-28 00:01:02.003"
+      metadata: creation_time=2025-10-28 00:01:02.003
     suffix: _xdcamhd_50m
     format: mxf
     twoPass: false
