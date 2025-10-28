@@ -1,5 +1,7 @@
 name: playout-mxf-hd
 description: MXF XDCAM HD for playout
+env:
+  CREATION_TIME: "{{ now_utc | date: '%Y-%m-%d %H:%M:%S.%3N' }}"
 encodes:
   - type: VideoEncode
     codec: mpeg2video
@@ -26,7 +28,7 @@ encodes:
       rc_init_occupancy: 910000
       pix_fmt: yuv422p
       timecode: 00:00:00:00
-      metadata: creation_time=$(date -u +"%Y-%m-%d %H:%M:%S.%3N")
+      metadata: creation_time=$CREATION_TIME
     suffix: _xdcamhd_50m
     format: mxf
     twoPass: false
