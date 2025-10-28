@@ -26,7 +26,7 @@ encodes:
       rc_init_occupancy: 910000
       pix_fmt: yuv422p
       timecode: 00:00:00:00
-      metadata: creation_time="{{ now_utc | date: '%Y-%m-%d %H:%M:%S.%3N' }}"
+      metadata: creation_time="{{ now_utc.strftime('%Y-%m-%d %H:%M:%S.%3N') }}"
     suffix: _xdcamhd_50m
     format: mxf
     twoPass: false
