@@ -26,6 +26,7 @@ encodes:
       rc_init_occupancy: 910000
       pix_fmt: yuv422p
       timecode: 00:00:00:00
+      metadata: creation_time=#{profileParams['utcnowstring']?:'1970-01-01 00:00:00.000'}
     suffix: _xdcamhd_50m
     format: mxf
     twoPass: false
