@@ -36,8 +36,12 @@ encodes:
         samplerate: 48000
         channelLayout: mono
         audioMixPreset: monoLeft
+        filters:
+          - "apad=pad_dur=0.1"
       - type: AudioEncode
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
         audioMixPreset: monoRight
+        filters:
+          - "apad=pad_dur=0.1"
