@@ -438,3 +438,69 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
+  - type: X265Encode
+    suffix: _x265_1080_25
+    twoPass: false
+    height: 1080
+    width: 1920
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest:
+      b:v: 5000k
+      maxrate: 7500k
+      bufsize: 10000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p10le
+      tag:v: hvc1
+      force_key_frames: "expr:not(mod,n96))"
+      profile:v: main10
+      level: 4.1
+    x265-params: # not sure if more specific settings are really needed
+      min-keyint: 96
+      keyint: 96
+      me: star
+      merange: 57
+      pmode: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X265Encode
+    suffix: _x265_1080_50
+    twoPass: false
+    height: 1080
+    width: 1920
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest:
+      b:v: 5000k
+      maxrate: 7500k
+      bufsize: 10000k
+      r: 50
+      fps_mode: cfr
+      pix_fmt: yuv420p10le
+      tag:v: hvc1
+      force_key_frames: "expr:not(mod,n96))"
+      profile:v: main10
+      level: 4.1
+    x265-params: # not sure if more specific settings are really needed
+      min-keyint: 96
+      keyint: 96
+      me: star
+      merange: 57
+      pmode: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
