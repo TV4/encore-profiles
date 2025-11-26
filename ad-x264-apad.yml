@@ -669,7 +669,7 @@ encodes:
       bitrate: 128k
       suffix: STEREO
   - type: X265Encode
-    suffix: _x265_432_25
+    suffix: _x265_432_50
     height: 432
     width: 768
     filters:
@@ -679,7 +679,7 @@ encodes:
       b:v: 1500k
       maxrate: 2250k
       bufsize: 3000k
-      r: 25
+      r: 50
       fps_mode: cfr
       pix_fmt: yuv420p10le
       tag:v: hvc1
@@ -700,3 +700,5 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
+  - type: X265Encode
+    suffix
