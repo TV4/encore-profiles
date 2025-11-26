@@ -570,3 +570,133 @@ encodes:
       codec: aac
       bitrate: 128k
       suffix: STEREO
+  - type: X265Encode
+    suffix: _x265_576_25
+    twoPass: false
+    width: 576
+    height: 1024
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest:
+      b:v: 2500k
+      maxrate: 3750k
+      bufrate: 5000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p10le
+      tag:v: hvc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main10
+    x265-params:
+      level-idc: 4.0
+      min-keyint: 96
+      keyint: 96
+      me: star
+      merange: 57
+      pmode: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X265Encode
+    suffix: _x265_576_50
+    twoPass: false
+    width: 576
+    height: 1024
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest:
+      b:v: 2500k
+      maxrate: 3750k
+      bufrate: 5000k
+      r: 50
+      fps_mode: cfr
+      pix_fmt: yuv420p10le
+      tag:v: hvc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main10
+    x265-params:
+      level-idc: 4.0
+      min-keyint: 96
+      keyint: 96
+      me: star
+      merange: 57
+      pmode: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X265Encode
+    suffix: _x265_432_25
+    height: 432
+    width: 768
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest:
+      b:v: 1500k
+      maxrate: 2250k
+      bufsize: 3000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p10le
+      tag:v: hvc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main10
+    x265-params:
+      level-idc: 4.0
+      min-keyint: 96
+      keyint: 96
+      me: star
+      merange: 57
+      pmode: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X265Encode
+    suffix: _x265_432_25
+    height: 432
+    width: 768
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest:
+      b:v: 1500k
+      maxrate: 2250k
+      bufsize: 3000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p10le
+      tag:v: hvc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main10
+    x265-params:
+      level-idc: 4.0
+      min-keyint: 96
+      keyint: 96
+      me: star
+      merange: 57
+      pmode: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
