@@ -17,4 +17,5 @@ playout-mxf-hd: playout-mxf-hd.yml
 playout-mxf-hd-dev: playout-mxf-hd-dev.yml
 program-hd-iris-dev: program-hd-iris-dev.yml
 program-hd-iris: program-hd-iris.yml
+playout-xavc-hd: playout-xavc-hd.yaml
 none:
