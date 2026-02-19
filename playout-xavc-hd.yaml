@@ -18,3 +18,5 @@ encodes:
       codec: pcm_s16le
       samplerate: 48000
       channels: 16
+      filters:
+        - "apad=pad_dur=0.1"
