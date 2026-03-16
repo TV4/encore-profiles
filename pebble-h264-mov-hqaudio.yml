@@ -1,0 +1,39 @@
+name: pebble-h264-mov-hqaudio
+description: H.264 High 4:2:2 playout master for Pebble (1080p50, CBR 35 Mbps, MOV, two-pass, HQ audio 256k)
+scaling: bicubic
+encodes:
+  - type: X264Encode
+    suffix: _pebble_h264_hqa
+    twoPass: true
+    height: 1080
+    format: mov
+    params:
+      b:v: 35M
+      maxrate: 35M
+      minrate: 35M
+      bufsize: 35M
+      r: 50
+      fps_mode: cfr
+      pix_fmt: yuv422p
+      profile:v: high422
+      level: 4.2
+      color_range: tv
+      colorspace: bt709
+      color_trc: bt709
+      color_primaries: bt709
+    x264-params:
+      nal-hrd: cbr
+      force-cfr: 1
+      keyint: 33
+      keyint_min: 33
+      bframes: 0
+      ref: 1
+      cabac: 1
+      scenecut: 0
+    audioEncode:
+      type: AudioEncode
+      codec: aac
+      bitrate: 256k
+      channels: 4
+      sampleRate: 48000
+      suffix: ""
