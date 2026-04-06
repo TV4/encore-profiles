@@ -4,7 +4,6 @@ scaling: bicubic
 encodes:
   - type: X264Encode
     suffix: _pebble_h264_hqa
-    twoPass: true
     height: 1080
     format: mov
     params:
