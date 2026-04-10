@@ -31,7 +31,7 @@ encodes:
       scenecut: 0
     audioEncode:
       type: AudioEncode
-      codec: aac
+      codec: pcm_s16le
       bitrate: 256k
       channels: 4
       sampleRate: 48000
