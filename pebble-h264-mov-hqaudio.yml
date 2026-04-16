@@ -37,4 +37,4 @@ encodes:
       sampleRate: 48000
       suffix: ""
       filters:
-          - "apad=pad_dur=0.1"
+        - "apad=pad_dur=0.1"
