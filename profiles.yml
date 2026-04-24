@@ -20,4 +20,5 @@ program-hd-iris-dev: program-hd-iris-dev.yml
 program-hd-iris: program-hd-iris.yml
 playout-xavc-hd: playout-xavc-hd.yaml
 pebble-h264-mov-hqaudio: pebble-h264-mov-hqaudio.yml
+pebble-h264-mov-hqaudio-8ch: pebble-h264-mov-hqaudio-8ch.yml
 none:
