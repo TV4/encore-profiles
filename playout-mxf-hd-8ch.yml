@@ -1,5 +1,5 @@
 name: playout-mxf-hd-8ch
-description: MXF XDCAM HD for playout with 8 PCM mono tracks (dubbed audio)
+description: MXF XDCAM HD for playout with 8 PCM mono tracks (4 stereo language pairs from labeled inputs)
 encodes:
   - type: VideoEncode
     codec: mpeg2video
@@ -31,59 +31,76 @@ encodes:
     format: mxf
     twoPass: false
     audioEncodes:
+      # lang0 = original language stereo pair (audio stream 0 of mezz)
       - type: AudioEncode
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
-        audioMixPreset: monoCh1
+        inputLabel: lang0
+        audioMixPreset: monoLeft
         filters:
           - "apad=pad_dur=0.1"
       - type: AudioEncode
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
-        audioMixPreset: monoCh2
+        inputLabel: lang0
+        audioMixPreset: monoRight
+        filters:
+          - "apad=pad_dur=0.1"
+      # lang1..lang3 = dub stereo pairs (audio streams 1..3 of mezz). Optional so
+      # sources with fewer than 4 stereo pairs do not fail the job.
+      - type: AudioEncode
+        codec: pcm_s24le
+        samplerate: 48000
+        channelLayout: mono
+        inputLabel: lang1
+        audioMixPreset: monoLeft
+        optional: true
         filters:
           - "apad=pad_dur=0.1"
       - type: AudioEncode
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
-        audioMixPreset: monoCh3
+        inputLabel: lang1
+        audioMixPreset: monoRight
+        optional: true
         filters:
           - "apad=pad_dur=0.1"
       - type: AudioEncode
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
-        audioMixPreset: monoCh4
+        inputLabel: lang2
+        audioMixPreset: monoLeft
+        optional: true
         filters:
           - "apad=pad_dur=0.1"
       - type: AudioEncode
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
-        audioMixPreset: monoCh5
+        inputLabel: lang2
+        audioMixPreset: monoRight
+        optional: true
         filters:
           - "apad=pad_dur=0.1"
       - type: AudioEncode
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
-        audioMixPreset: monoCh6
+        inputLabel: lang3
+        audioMixPreset: monoLeft
+        optional: true
         filters:
           - "apad=pad_dur=0.1"
       - type: AudioEncode
         codec: pcm_s24le
         samplerate: 48000
         channelLayout: mono
-        audioMixPreset: monoCh7
-        filters:
-          - "apad=pad_dur=0.1"
-      - type: AudioEncode
-        codec: pcm_s24le
-        samplerate: 48000
-        channelLayout: mono
-        audioMixPreset: monoCh8
+        inputLabel: lang3
+        audioMixPreset: monoRight
+        optional: true
         filters:
           - "apad=pad_dur=0.1"
