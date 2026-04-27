@@ -15,8 +15,10 @@ ad-x264-apad: ad-x264-apad.yml
 ad-x264-4-by-3: ad-x264-4-by-3.yml
 playout-mxf-hd: playout-mxf-hd.yml
 playout-mxf-hd-dev: playout-mxf-hd-dev.yml
+playout-mxf-hd-8ch: playout-mxf-hd-8ch.yml
 program-hd-iris-dev: program-hd-iris-dev.yml
 program-hd-iris: program-hd-iris.yml
 playout-xavc-hd: playout-xavc-hd.yaml
 pebble-h264-mov-hqaudio: pebble-h264-mov-hqaudio.yml
+pebble-h264-mov-hqaudio-8ch: pebble-h264-mov-hqaudio-8ch.yml
 none:

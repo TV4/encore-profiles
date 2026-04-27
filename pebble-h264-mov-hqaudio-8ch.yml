@@ -1,0 +1,88 @@
+name: pebble-h264-mov-hqaudio-8ch
+description: H.264 High 4:2:2 playout master for Pebble (1080p50, CBR 35 Mbps, MXF, two-pass) with 8 PCM mono tracks (dubbed audio)
+scaling: bicubic
+encodes:
+  - type: X264Encode
+    suffix: _pebble_h264_hqa
+    height: 1080
+    format: mxf
+    params:
+      b:v: 35M
+      maxrate: 35M
+      minrate: 35M
+      bufsize: 35M
+      r: 50
+      fps_mode: cfr
+      pix_fmt: yuv422p
+      profile:v: high422
+      level: 4.2
+      color_range: tv
+      colorspace: bt709
+      color_trc: bt709
+      color_primaries: bt709
+    x264-params:
+      nal-hrd: cbr
+      force-cfr: 1
+      keyint: 33
+      keyint_min: 33
+      bframes: 0
+      ref: 1
+      cabac: 1
+      scenecut: 0
+    audioEncodes:
+      - type: AudioEncode
+        codec: pcm_s16le
+        sampleRate: 48000
+        channelLayout: mono
+        audioMixPreset: monoCh1
+        filters:
+          - "apad=pad_dur=0.1"
+      - type: AudioEncode
+        codec: pcm_s16le
+        sampleRate: 48000
+        channelLayout: mono
+        audioMixPreset: monoCh2
+        filters:
+          - "apad=pad_dur=0.1"
+      - type: AudioEncode
+        codec: pcm_s16le
+        sampleRate: 48000
+        channelLayout: mono
+        audioMixPreset: monoCh3
+        filters:
+          - "apad=pad_dur=0.1"
+      - type: AudioEncode
+        codec: pcm_s16le
+        sampleRate: 48000
+        channelLayout: mono
+        audioMixPreset: monoCh4
+        filters:
+          - "apad=pad_dur=0.1"
+      - type: AudioEncode
+        codec: pcm_s16le
+        sampleRate: 48000
+        channelLayout: mono
+        audioMixPreset: monoCh5
+        filters:
+          - "apad=pad_dur=0.1"
+      - type: AudioEncode
+        codec: pcm_s16le
+        sampleRate: 48000
+        channelLayout: mono
+        audioMixPreset: monoCh6
+        filters:
+          - "apad=pad_dur=0.1"
+      - type: AudioEncode
+        codec: pcm_s16le
+        sampleRate: 48000
+        channelLayout: mono
+        audioMixPreset: monoCh7
+        filters:
+          - "apad=pad_dur=0.1"
+      - type: AudioEncode
+        codec: pcm_s16le
+        sampleRate: 48000
+        channelLayout: mono
+        audioMixPreset: monoCh8
+        filters:
+          - "apad=pad_dur=0.1"
