@@ -20,6 +20,10 @@ encodes:
       colorspace: bt709
       color_trc: bt709
       color_primaries: bt709
+      # Start timecode of the output. The control plane passes the preserved
+      # source SOM via profileParams['timecode'] for PLUTO jobs; defaults to
+      # zero-based when absent (unchanged behaviour).
+      timecode: "#{profileParams['timecode']?:'00:00:00:00'}"
     x264-params:
       nal-hrd: cbr
       force-cfr: 1
