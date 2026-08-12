@@ -10,7 +10,7 @@ encodes:
     filters:
       - colorspace=all=bt709:iall=bt709
     params:
-      shortest:
+      shortest: ""
       b:v: 5000k
       maxrate: 7500k
       bufsize: 10000k
@@ -46,7 +46,7 @@ encodes:
     filters:
       - colorspace=all=bt709:iall=bt709
     params:
-      shortest:
+      shortest: ""
       b:v: 3500k
       maxrate: 5250k
       bufsize: 6000k
@@ -82,7 +82,7 @@ encodes:
     filters:
       - colorspace=all=bt709:iall=bt709
     params:
-      shortest:
+      shortest: ""
       b:v: 3500k
       maxrate: 5250k
       bufsize: 7000k
@@ -118,7 +118,7 @@ encodes:
     filters:
       - colorspace=all=bt709:iall=bt709
     params:
-      shortest:
+      shortest: ""
       b:v: 2500k
       maxrate: 3750k
       bufsize: 5000k
@@ -154,7 +154,7 @@ encodes:
     filters:
       - colorspace=all=bt709:iall=bt709
     params:
-      shortest:
+      shortest: ""
       b:v: 2500k
       maxrate: 3750k
       bufsize: 5000k
@@ -190,7 +190,7 @@ encodes:
     filters:
       - colorspace=all=bt709:iall=bt709
     params:
-      shortest:
+      shortest: ""
       b:v: 1500k
       maxrate: 2250k
       bufsize: 3000k
@@ -226,7 +226,7 @@ encodes:
     filters:
       - colorspace=all=bt709:iall=bt709
     params:
-      shortest:
+      shortest: ""
       b:v: 800k
       maxrate: 1200k
       bufsize: 1600k
@@ -262,7 +262,7 @@ encodes:
     filters:
       - colorspace=all=bt709:iall=bt709
     params:
-      shortest:
+      shortest: ""
       b:v: 300k
       maxrate: 450k
       bufsize: 600k
@@ -299,7 +299,7 @@ encodes:
       - colorspace=all=bt709:iall=bt709
       - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
     params:
-      shortest:
+      shortest: ""
       b:v: 2500k
       maxrate: 3750k
       bufsize: 5000k
@@ -336,7 +336,7 @@ encodes:
       - colorspace=all=bt709:iall=bt709
       - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
     params:
-      shortest:
+      shortest: ""
       b:v: 1500k
       maxrate: 2250k
       bufsize: 3000k
@@ -373,7 +373,7 @@ encodes:
       - colorspace=all=bt709:iall=bt709
       - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
     params:
-      shortest:
+      shortest: ""
       b:v: 800k
       maxrate: 1200k
       bufsize: 1600k
@@ -410,7 +410,7 @@ encodes:
       - colorspace=all=bt709:iall=bt709
       - "pad=width=max(iw\\,ih*(4/3)):height=ow/(4/3):x=(ow-iw)/2:y=(oh-ih)/2" # Pad to 4:3
     params:
-      shortest:
+      shortest: ""
       b:v: 300k
       maxrate: 450k
       bufsize: 600k
