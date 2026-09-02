@@ -6,6 +6,7 @@ encodes:
     suffix: _pebble_h264_hqa
     height: 1080
     format: mxf
+    twoPass: false
     params:
       b:v: 35M
       maxrate: 35M
