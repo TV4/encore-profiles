@@ -29,7 +29,9 @@ rebuilt:
   commit dev1 last baked off the newest successful image build and dispatches
   `Deploy Encore image on IrisDev1` when `main` here is a different commit.
   Nothing in this repo triggers it - this repo is public and holds no token
-  for iris-transcoding.
+  for iris-transcoding. If the previous rebuild failed or was cancelled the
+  poller waits 3 hours before trying again, so a merge can take longer than
+  25 minutes to land; the nightly rebuild is the last fallback.
   The rebuild restarts the dev1 Encore service, which can kill in-flight dev1
   transcodes. To confirm which commit a run baked, look at the
   `encore-profiles-ref` label in its `Build and push image` step inputs.
