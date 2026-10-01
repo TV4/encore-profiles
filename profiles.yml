@@ -21,4 +21,6 @@ program-hd-iris: program-hd-iris.yml
 playout-xavc-hd: playout-xavc-hd.yaml
 pebble-h264-mov-hqaudio: pebble-h264-mov-hqaudio.yml
 pebble-h264-mov-hqaudio-8ch: pebble-h264-mov-hqaudio-8ch.yml
+steffo-match-framerate: steffo-match-source-fps.yml
+steffo-match-framerate-hfr: steffo-match-source-fps-hfr.yml
 none:
