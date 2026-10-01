@@ -1,12 +1,12 @@
-name: steffo-match-source-fps
-description: Program HD profile, single pass. Output frame rate follows the input, constant (CFR), up to 30fps.
+name: steffo-match-source-fps-hfr
+description: Program HD profile, single pass. Output frame rate follows the input, constant (CFR), for high-frame-rate sources.
 scaling: bicubic
 
 encodes:
   - type: X264Encode
-    suffix: _6500_1080p
+    suffix: _6500_720p
     twoPass: false
-    height: 1080
+    height: 720
     params:
       preset: medium
       maxrate: 6500k
@@ -16,8 +16,7 @@ encodes:
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:gte(t,n_forced*3.84)'}
       profile:v: high
-      level: 4.1
-      write_tmcd: 0
+      level: 3.2
     x264-params:
       keyint: 384
       keyint_min: 96
@@ -44,8 +43,7 @@ encodes:
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:gte(t,n_forced*3.84)'}
       profile:v: high
-      level: 3.1
-      write_tmcd: 0
+      level: 3.2
     x264-params:
       keyint: 384
       keyint_min: 96
@@ -72,8 +70,7 @@ encodes:
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:gte(t,n_forced*3.84)'}
       profile:v: main
-      level: 3.1
-      write_tmcd: 0
+      level: 3.2
     x264-params:
       keyint: 384
       keyint_min: 96
@@ -100,8 +97,7 @@ encodes:
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:gte(t,n_forced*3.84)'}
       profile:v: main
-      level: 3.0
-      write_tmcd: 0
+      level: 3.1
     x264-params:
       keyint: 384
       keyint_min: 96
@@ -128,8 +124,7 @@ encodes:
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:gte(t,n_forced*3.84)'}
       profile:v: main
-      level: 3.0
-      write_tmcd: 0
+      level: 3.1
     x264-params:
       keyint: 384
       keyint_min: 96
@@ -156,8 +151,7 @@ encodes:
       pix_fmt: yuv420p
       force_key_frames: #{profileParams['keyframes']?:'expr:gte(t,n_forced*3.84)'}
       profile:v: main
-      level: 3.0
-      write_tmcd: 0
+      level: 2.2
     x264-params:
       keyint: 384
       keyint_min: 96
