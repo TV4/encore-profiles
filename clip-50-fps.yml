@@ -1,0 +1,184 @@
+name: clip-50-fps
+description: Ad profile for 50fps clips with 25fps lower-rung fallback
+scaling: bicubic # lanczos might e better, but has a performance impact
+encodes:
+  - type: X264Encode
+    suffix: _x264_720_50
+    twoPass: false # Might want 2-pass, we'll see
+    height: 720
+    width: 1280
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest: ""
+      b:v: 3500k
+      maxrate: 5250k
+      bufsize: 7000k
+      r: 50
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: high
+      level: 3.2
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_576_50
+    twoPass: false # Might want 2-pass, we'll see
+    height: 576
+    width: 1024
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest: ""
+      b:v: 2500k
+      maxrate: 3750k
+      bufsize: 5000k
+      r: 50
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.2
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_432_25
+    twoPass: false # Might want 2-pass, we'll see
+    height: 432
+    width: 768
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest: ""
+      b:v: 1500k
+      maxrate: 2250k
+      bufsize: 3000k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.0
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_360_25
+    twoPass: false # Might want 2-pass, we'll see
+    height: 360
+    width: 640
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest: ""
+      b:v: 800k
+      maxrate: 1200k
+      bufsize: 1600k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 3.0
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
+  - type: X264Encode
+    suffix: _x264_216_25
+    twoPass: false # Might want 2-pass, we'll see
+    height: 216
+    width: 384
+    filters:
+      - colorspace=all=bt709:iall=bt709
+    params:
+      shortest: ""
+      b:v: 300k
+      maxrate: 450k
+      bufsize: 600k
+      r: 25
+      fps_mode: cfr
+      pix_fmt: yuv420p
+      tag:v: avc1
+      force_key_frames: "expr:not(mod(n,96))"
+      profile:v: main
+      level: 1.3
+    x264-params:
+      deblock: 0,0
+      aq-mode: 1
+      aq-strength: 1.0
+      keyint: 192
+      keyint_min: 96
+      me: hex
+      merange: 16
+      cabac: 1
+    audioEncode:
+      filters:
+        - apad=packet_size=1
+      optional: true
+      type: AudioEncode
+      codec: aac
+      bitrate: 128k
+      suffix: STEREO
