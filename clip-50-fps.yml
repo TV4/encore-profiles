@@ -59,7 +59,7 @@ encodes:
       colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
-      profile:v: main
+      profile:v: high
       level: 3.2
       preset: veryfast
     x264-params:
