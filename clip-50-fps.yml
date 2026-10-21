@@ -7,8 +7,6 @@ encodes:
     twoPass: false # Might want 2-pass, we'll see
     height: 720
     width: 1280
-    filters:
-      - colorspace=all=bt709:iall=bt709
     params:
       shortest: ""
       b:v: 3500k
@@ -17,10 +15,14 @@ encodes:
       r: 50
       fps_mode: cfr
       pix_fmt: yuv420p
+      color_primaries: bt709
+      color_trc: bt709
+      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: high
       level: 3.2
+      preset: veryfast
     x264-params:
       deblock: 0,0
       aq-mode: 1
@@ -43,8 +45,6 @@ encodes:
     twoPass: false # Might want 2-pass, we'll see
     height: 576
     width: 1024
-    filters:
-      - colorspace=all=bt709:iall=bt709
     params:
       shortest: ""
       b:v: 2500k
@@ -53,10 +53,14 @@ encodes:
       r: 50
       fps_mode: cfr
       pix_fmt: yuv420p
+      color_primaries: bt709
+      color_trc: bt709
+      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: main
       level: 3.2
+      preset: veryfast
     x264-params:
       deblock: 0,0
       aq-mode: 1
@@ -79,8 +83,6 @@ encodes:
     twoPass: false # Might want 2-pass, we'll see
     height: 432
     width: 768
-    filters:
-      - colorspace=all=bt709:iall=bt709
     params:
       shortest: ""
       b:v: 1500k
@@ -89,10 +91,14 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
+      color_primaries: bt709
+      color_trc: bt709
+      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: main
       level: 3.0
+      preset: veryfast
     x264-params:
       deblock: 0,0
       aq-mode: 1
@@ -115,8 +121,6 @@ encodes:
     twoPass: false # Might want 2-pass, we'll see
     height: 360
     width: 640
-    filters:
-      - colorspace=all=bt709:iall=bt709
     params:
       shortest: ""
       b:v: 800k
@@ -125,10 +129,14 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
+      color_primaries: bt709
+      color_trc: bt709
+      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: main
       level: 3.0
+      preset: veryfast
     x264-params:
       deblock: 0,0
       aq-mode: 1
@@ -151,8 +159,6 @@ encodes:
     twoPass: false # Might want 2-pass, we'll see
     height: 216
     width: 384
-    filters:
-      - colorspace=all=bt709:iall=bt709
     params:
       shortest: ""
       b:v: 300k
@@ -161,10 +167,14 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
+      color_primaries: bt709
+      color_trc: bt709
+      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: main
       level: 1.3
+      preset: veryfast
     x264-params:
       deblock: 0,0
       aq-mode: 1
