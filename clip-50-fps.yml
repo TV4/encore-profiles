@@ -15,9 +15,6 @@ encodes:
       r: 50
       fps_mode: cfr
       pix_fmt: yuv420p
-      color_primaries: bt709
-      color_trc: bt709
-      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,192))" # 3.84 s, same grid as the 25 fps rungs
       profile:v: high
@@ -33,6 +30,11 @@ encodes:
       subme: 1
       weightp: 0
       cabac: 1
+      # Tag only: ffmpeg's -colorspace etc. made every scaler convert untagged
+      # sources from BT.601, costing ~25% CPU and shifting colours.
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       filters:
         - apad=packet_size=1
@@ -54,9 +56,6 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
-      color_primaries: bt709
-      color_trc: bt709
-      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: high
@@ -72,6 +71,9 @@ encodes:
       subme: 1
       weightp: 0
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       filters:
         - apad=packet_size=1
@@ -93,9 +95,6 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
-      color_primaries: bt709
-      color_trc: bt709
-      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: main
@@ -110,6 +109,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       filters:
         - apad=packet_size=1
@@ -131,9 +133,6 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
-      color_primaries: bt709
-      color_trc: bt709
-      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: main
@@ -148,6 +147,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       filters:
         - apad=packet_size=1
@@ -169,9 +171,6 @@ encodes:
       r: 25
       fps_mode: cfr
       pix_fmt: yuv420p
-      color_primaries: bt709
-      color_trc: bt709
-      colorspace: bt709
       tag:v: avc1
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: main
@@ -186,6 +185,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       filters:
         - apad=packet_size=1
