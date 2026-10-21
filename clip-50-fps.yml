@@ -19,7 +19,7 @@ encodes:
       color_trc: bt709
       colorspace: bt709
       tag:v: avc1
-      force_key_frames: "expr:not(mod(n,96))"
+      force_key_frames: "expr:not(mod(n,192))" # 3.84 s, same grid as the 25 fps rungs
       profile:v: high
       level: 3.2
       preset: veryfast
