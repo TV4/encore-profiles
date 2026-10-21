@@ -19,16 +19,13 @@ encodes:
       force_key_frames: "expr:not(mod(n,192))" # 3.84 s, same grid as the 25 fps rungs
       profile:v: high
       level: 3.2
-      preset: veryfast
+      preset: faster
     x264-params:
       deblock: 0,0
       aq-mode: 1
       aq-strength: 1.0
       keyint: 192
       keyint_min: 96
-      me: dia
-      subme: 1
-      weightp: 0
       cabac: 1
       # Tag only: ffmpeg's -colorspace etc. made every scaler convert untagged
       # sources from BT.601, costing ~25% CPU and shifting colours.
@@ -60,16 +57,13 @@ encodes:
       force_key_frames: "expr:not(mod(n,96))"
       profile:v: high
       level: 3.2
-      preset: veryfast
+      preset: faster
     x264-params:
       deblock: 0,0
       aq-mode: 1
       aq-strength: 1.0
       keyint: 192
       keyint_min: 96
-      me: dia
-      subme: 1
-      weightp: 0
       cabac: 1
       colorprim: bt709
       transfer: bt709
