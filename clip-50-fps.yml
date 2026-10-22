@@ -1,5 +1,5 @@
 name: clip-50-fps
-description: Ad profile for 50fps clips; 720p at 50fps, lower rungs at 25fps
+description: Profile for 50fps clips; 720p and 576p at 50fps, lower rungs at 25fps
 scaling: bicubic # lanczos might e better, but has a performance impact
 encodes:
   - type: X264Encode
@@ -19,16 +19,13 @@ encodes:
       force_key_frames: "expr:not(mod(n,192))" # 3.84 s, same grid as the 25 fps rungs
       profile:v: high
       level: 3.2
-      preset: veryfast
+      preset: faster
     x264-params:
       deblock: 0,0
       aq-mode: 1
       aq-strength: 1.0
       keyint: 192
       keyint_min: 96
-      me: dia
-      subme: 1
-      weightp: 0
       cabac: 1
       # Tag only: ffmpeg's -colorspace etc. made every scaler convert untagged
       # sources from BT.601, costing ~25% CPU and shifting colours.
@@ -44,7 +41,7 @@ encodes:
       bitrate: 128k
       suffix: STEREO
   - type: X264Encode
-    suffix: _x264_576_25
+    suffix: _x264_576_50
     twoPass: false # Might want 2-pass, we'll see
     height: 576
     width: 1024
@@ -53,11 +50,11 @@ encodes:
       b:v: 2500k
       maxrate: 3750k
       bufsize: 5000k
-      r: 25
+      r: 50
       fps_mode: cfr
       pix_fmt: yuv420p
       tag:v: avc1
-      force_key_frames: "expr:not(mod(n,96))"
+      force_key_frames: "expr:not(mod(n,192))"
       profile:v: high
       level: 3.2
       preset: veryfast
@@ -67,9 +64,6 @@ encodes:
       aq-strength: 1.0
       keyint: 192
       keyint_min: 96
-      me: dia
-      subme: 1
-      weightp: 0
       cabac: 1
       colorprim: bt709
       transfer: bt709
