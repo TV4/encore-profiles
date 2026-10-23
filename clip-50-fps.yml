@@ -9,9 +9,9 @@ encodes:
     width: 1280
     params:
       shortest: ""
-      b:v: 3500k
-      maxrate: 5250k
-      bufsize: 7000k
+      b:v: 4500k
+      maxrate: 6750k
+      bufsize: 9000k
       r: 50
       fps_mode: cfr
       pix_fmt: yuv420p
