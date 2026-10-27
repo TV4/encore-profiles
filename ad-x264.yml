@@ -27,6 +27,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       optional: true
       type: AudioEncode
@@ -58,6 +61,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       optional: true
       type: AudioEncode
@@ -89,6 +95,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       optional: true
       type: AudioEncode
@@ -120,6 +129,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       optional: true
       type: AudioEncode
@@ -151,6 +163,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       optional: true
       type: AudioEncode
@@ -182,6 +197,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       optional: true
       type: AudioEncode
@@ -213,6 +231,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       optional: true
       type: AudioEncode
@@ -244,6 +265,9 @@ encodes:
       me: hex
       merange: 16
       cabac: 1
+      colorprim: bt709
+      transfer: bt709
+      colormatrix: bt709
     audioEncode:
       optional: true
       type: AudioEncode
@@ -277,6 +301,9 @@ encodes:
         me: hex
         merange: 16
         cabac: 1
+        colorprim: bt709
+        transfer: bt709
+        colormatrix: bt709
     audioEncode:
         optional: true
         type: AudioEncode
@@ -310,6 +337,9 @@ encodes:
         me: hex
         merange: 16
         cabac: 1
+        colorprim: bt709
+        transfer: bt709
+        colormatrix: bt709
     audioEncode:
         optional: true
         type: AudioEncode
@@ -343,6 +373,9 @@ encodes:
         me: hex
         merange: 16
         cabac: 1
+        colorprim: bt709
+        transfer: bt709
+        colormatrix: bt709
     audioEncode:
         optional: true
         type: AudioEncode
@@ -376,6 +409,9 @@ encodes:
         me: hex
         merange: 16
         cabac: 1
+        colorprim: bt709
+        transfer: bt709
+        colormatrix: bt709
     audioEncode:
         optional: true
         type: AudioEncode
