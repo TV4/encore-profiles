@@ -21,7 +21,6 @@ encodes:
       colorspace: bt709
       color_trc: bt709
       color_primaries: bt709
-      timecode: "#{profileParams['timecode']?:'00:00:00:00'}"
     x264-params:
       nal-hrd: cbr
       force-cfr: 1
