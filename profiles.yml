@@ -12,4 +12,5 @@ ad-x264: ad-x264.yml
 ad-x264-apad: ad-x264-apad.yml
 clip-50-fps: clip-50-fps.yml
 ad-x264-4-by-3: ad-x264-4-by-3.yml
+pebble-h264-secrec-prores: pebble-h264-secrec-prores.yml
 none:
